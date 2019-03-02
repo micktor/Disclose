@@ -1,0 +1,64 @@
+package disclose.org.disclosefinal;
+
+import android.database.Cursor;
+import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+import disclose.org.disclose69.R;
+
+public class EntryResult_Act extends AppCompatActivity {
+    EntryDatabase myDB;
+    private ListView timeview;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.entryresult);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+        timeview = (ListView) findViewById(R.id.timeview);
+
+        myDB = new EntryDatabase(this);
+
+        populateListView();
+    }
+
+
+
+    private void populateListView() {
+        //mDatabaseHelper.deleteName();
+        //get the data and append to a list
+        Cursor data = myDB.getData();
+        System.out.println(data);
+        ArrayList<String> listData = new ArrayList<>();
+        ArrayList<String> pixData = new ArrayList<>();
+
+        while (data.moveToNext()) {
+            //get the value from the database in column 1
+            //then add it to the ArrayList
+            //listData.add(data.getString(5));
+            listData.add(data.getString(1));
+            listData.add(data.getString(2));
+            listData.add(data.getString(3));
+            listData.add(data.getString(4));
+
+            //listData.add(data.getString(3));
+            listData.add("");
+            pixData.add("");
+
+        }
+        //create the list adapter and set the adapter
+        ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
+
+        timeview.setAdapter(adapter);
+
+
+    }
+}

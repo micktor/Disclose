@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:orientation="vertical"
+    android:paddingTop="120dp"
+    tools:context="disclose.org.disclosefinal.SearchSmsAct">
+
+    <EditText
+        android:id="@+id/editTextSelectContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="Select Contact"
+        android:inputType="textPersonName|phone"
+        android:onClick="onClickSearchSms"
+        android:textAlignment="center" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonYour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Just your messages" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTheir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Just their messages" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="Both your messages" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonAnalyzeSms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/my_button_bg"
+        android:onClick="onClickAnalyzeSms"
+        android:text="Analyze Text Messages" />
+
+</LinearLayout>

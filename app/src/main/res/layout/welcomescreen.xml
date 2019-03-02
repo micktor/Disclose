@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context="disclose.org.disclosefinal.WelcomeScreen_Act">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="["
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="@android:dimen/app_icon_size" />
+
+        <TextView
+            android:id="@+id/D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="-15dp"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="@color/colorAccent"
+            android:textSize="100dp" />
+
+        <TextView
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="]"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="@android:dimen/app_icon_size" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/disclose"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:autoText="true"
+        android:textAlignment="center"
+        android:text="Choose from the options below to start analyzing your text:"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buttonAnalyzeMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_button_bg"
+        android:text="Analyze SMS"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_button_bg"
+        android:text="Mood Entry"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_button_bg"
+        android:text="Happiness Timeline"
+        android:layout_margin="20dp" />
+
+</LinearLayout>
